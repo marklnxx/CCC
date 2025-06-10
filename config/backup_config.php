@@ -1,0 +1,19 @@
+<?php
+// Configuración de respaldo generada el 2025-05-28 20:59:40
+$backup_config = array (
+  'ruta_respaldo' => 'C:\\Users\\Informatica-stm\\Desktop',
+  'dias_conservar' => 30,
+  'email_principal' => 'marcosarbelo@casanova.com.uy',
+  'email_cc' => '',
+  'email_remitente' => 'marcosarbelo@casanova.com.uy',
+  'asunto_correo' => 'Respaldo de Base de Datos - Gestión de Cubiertas',
+  'enviar_adjunto' => true,
+  'notificar_exito' => true,
+  'notificar_error' => true,
+  'email_error' => '',
+  'frecuencia' => 5,
+  'hora_respaldo' => '02:00',
+  'paso_actual' => 5,
+  'ultima_configuracion' => '2025-05-28 20:59:40',
+);
+?>
