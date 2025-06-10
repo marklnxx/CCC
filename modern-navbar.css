@@ -1,0 +1,120 @@
+/* modern-navbar-refined.css - Estilo macOS para navbar */
+
+/* Contenedor principal de la barra de navegación */
+.modern-navbar {
+    background-color: #2d2d2d;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+     margin: -20px auto 5px auto;  /* -5px arriba, 5px abajo */
+    padding: 5px 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Contenedor de los botones de navegación */
+.navbar-buttons {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Estilo para cada botón de navegación */
+.navbar-button {
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.7); /* Color base algo translúcido */
+    border: none;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    text-decoration: none;
+    letter-spacing: 0.3px;
+    flex-shrink: 0; /* Evita que los botones se compriman */
+}
+
+/* Efecto hover para los botones */
+.navbar-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+}
+
+/* Estilo para el botón activo */
+.navbar-button.active {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+}
+
+/* Iconos dentro de los botones */
+.navbar-button i, 
+.navbar-button span.iconify {
+    font-size: 15px;
+    min-width: 15px; /* Asegura que los iconos ocupen el mismo espacio */
+}
+
+/* Efecto especial para el borde del navbar - estilo macOS */
+.modern-navbar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 15px;
+    pointer-events: none;
+}
+
+/* Versión responsive */
+@media (max-width: 992px) {
+    .modern-navbar {
+        border-radius: 12px;
+        padding: 5px 8px;
+    }
+    
+    .navbar-buttons {
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding: 3px;
+        gap: 3px;
+        mask-image: linear-gradient(to right, black 85%, transparent 100%);
+        -webkit-mask-image: linear-gradient(to right, black 85%, transparent 100%);
+    }
+    
+    .navbar-button {
+        padding: 7px 10px;
+        font-size: 12px;
+    }
+}
+
+/* Añadir al final de tu modern-navbar.css */
+
+/* Estilos para iconos Iconify */
+.navbar-button .iconify {
+    font-size: 16px;
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.125em;
+    display: inline-block;
+}
+
+/* Asegurar que tanto Font Awesome como Iconify tengan el mismo tamaño */
+.navbar-button i,
+.navbar-button .iconify {
+    font-size: 16px;
+    min-width: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: inherit;
+}

@@ -1,0 +1,124 @@
+/* nuevo-header.css - Para ajustar el header al 90% y centrar el logo */
+
+/* Resetear estilos previos de encabezado para evitar conflictos */
+header {
+    display: block !important;
+    position: relative !important;
+    padding: 15px !important;
+    background-color: #2d2d2d !important;
+    border-radius: 8px !important;
+    margin-bottom: 20px !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
+    width: 89% !important; /* Ajustar al 90% del ancho */
+    margin-left: auto !important; /* Centrar el header */
+    margin-right: auto !important;
+    margin-top: 20px !important; /* Agregar espacio en la parte superior */
+    box-sizing: border-box !important;
+}
+
+/* Reestructurar el contenedor del logo y título */
+header .logo-container,
+header .header-container {
+    display: flex !important;
+    flex-direction: column !important; /* Apilar elementos verticalmente */
+    align-items: center !important; /* Centrar horizontalmente */
+    justify-content: center !important; 
+    width: 100% !important;
+    gap: 25px !important; /* Espacio entre logo y título */
+    box-sizing: border-box !important;
+}
+
+/* Quitar estilos previos de grid */
+header .logo-container:before {
+    display: none !important;
+}
+
+/* Forzar el tamaño del logo con selectores muy específicos - solución radical */
+body header .logo-container img,
+body header .header-container img,
+body header .logo-wrapper img,
+body header .header-logo,
+header img[src*="LOGO"],
+header img[src*="logo"],
+.logo-container > img,
+.header-container > img,
+.logo-wrapper > img,
+img.fade-in,
+img.header-logo {
+    order: 1 !important;
+    width: auto !important;
+    min-height: 110px !important;
+    max-height: none !important;
+    height: 105px !important; /* Forzar altura exacta */
+    margin: 0 auto !important;
+    display: block !important;
+    justify-self: center !important;
+    position: relative !important;
+    z-index: 100 !important; /* Aumentar z-index para asegurar visibilidad */
+    object-fit: contain !important; /* Mantener proporciones */
+    transform: scale(1.0) !important; /* Forzar escala 1:1 */
+}
+
+/* Estilizar el título para que sea más prominente */
+header .logo-container h1,
+header .header-container h1,
+header .header-title {
+    order: 2 !important; /* Título después del logo */
+    text-align: center !important;
+    color: #3498db !important;
+    font-size: 2.5rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 1px !important;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    justify-self: center !important;
+    background: linear-gradient(90deg, #999, #939393) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    color: transparent !important;
+    text-transform: uppercase !important;
+}
+
+
+/* Ajustes para la estructura alternativa de header */
+header .empty-space {
+    display: none !important;
+}
+
+header .logo-wrapper {
+    display: flex !important;
+    justify-content: center !important;
+    width: 100% !important;
+    order: 1 !important;
+}
+
+/* Media query para asegurar responsividad */
+@media (max-width: 768px) {
+    header {
+        width: 95% !important; /* Un poco más ancho en pantallas pequeñas */
+        padding: 10px !important;
+    }
+    
+    header .logo-container h1,
+    header .header-container h1,
+    header .header-title {
+        font-size: 1.8rem !important;
+    }
+    
+    body header .logo-container img,
+    body header .header-container img,
+    body header .logo-wrapper img,
+    body header .header-logo,
+    header img[src*="LOGO"],
+    header img[src*="logo"],
+    .logo-container > img,
+    .header-container > img,
+    .logo-wrapper > img,
+    img.fade-in,
+    img.header-logo {
+        height: 120px !important; /* Ligeramente menor en móviles */
+        min-height: 120px !important;
+    }
+}

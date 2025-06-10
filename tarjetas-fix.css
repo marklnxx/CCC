@@ -1,0 +1,178 @@
+/* Archivo tarjetas-fix.css */
+
+/* Estilos globales para todas las tarjetas */
+.cubierta-card {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) !important; /* Transición más suave */
+    border-left: 4px solid var(--color-primary) !important;
+    margin-bottom: 25px !important;
+    overflow: hidden !important;
+}
+
+/* Efecto hover más suave y elegante */
+.cubierta-card:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.35) !important;
+}
+
+/* Asegurar que todos los títulos no hagan salto de línea */
+.cubierta-title {
+    background: linear-gradient(to right, var(--color-primary), #2980b9) !important;
+    color: white !important;
+    padding: 5px !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    height: auto !important;
+    min-height: 60px !important;
+    display: flex !important;
+    align-items: center !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+}
+
+/* Hacer la parte de información más grande */
+.cubierta-info {
+    padding: 30px 20px !important;
+    margin-bottom: 10px !important;
+    background-color: #2d2d2d !important;
+    min-height: 180px !important;
+}
+
+.cubierta-info p {
+    margin: 18px 0 !important;
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+}
+
+/* Hacer el formulario más compacto */
+.formulario-cambio {
+    padding: 15px !important;
+    margin: 0 15px 15px 15px !important;
+    transform: scale(0.95) !important;
+    transform-origin: top center !important;
+    background-color: #222 !important;
+    border-radius: 8px !important;
+    border: 1px solid #444 !important;
+}
+
+.formulario-cambio label {
+    font-size: 13px !important;
+    margin-bottom: 5px !important;
+    color: var(--color-primary) !important;
+}
+
+.formulario-cambio select,
+.formulario-cambio input[type="number"] {
+    padding: 8px 10px !important;
+    margin-bottom: 10px !important;
+    height: 35px !important;
+    width: 100% !important;
+    background-color: #333 !important;
+    color: #f5f5f5 !important;
+    border: 1px solid #444 !important;
+    border-radius: 6px !important;
+}
+
+.check-container {
+    margin: 8px 0 !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.check-container input[type="checkbox"] {
+    margin-right: 8px !important;
+}
+
+.check-container label {
+    font-size: 12px !important;
+    margin-bottom: 0 !important;
+}
+
+.formulario-cambio button {
+    padding: 8px !important;
+    font-size: 13px !important;
+    height: 35px !important;
+    width: 100% !important;
+    background: linear-gradient(to right, var(--color-primary), #2980b9) !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 6px !important;
+    cursor: pointer !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    transition: all 0.3s ease !important;
+}
+
+.formulario-cambio button:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Ajustes específicos para las tarjetas de la fila delantera */
+.fila-delantera .cubierta-card {
+    width: calc(45% - 20px) !important;
+    min-width: 350px !important;
+    max-width: 500px !important;
+}
+
+/* Ajustes específicos para las tarjetas de la fila trasera */
+.fila-trasera .cubierta-card {
+    width: calc(24% - 20px) !important;
+    min-width: 280px !important;
+    max-width: 350px !important;
+}
+
+/* Ajustes específicos para asegurarnos que las tarjetas traseras tengan los mismos estilos */
+body .main-container .content .fila-cubiertas.fila-trasera .cubierta-card .cubierta-title {
+    padding: 5px !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    min-height: 60px !important;
+    white-space: nowrap !important;
+}
+
+body .main-container .content .fila-cubiertas.fila-trasera .cubierta-card .cubierta-info {
+    padding: 30px 20px !important;
+    min-height: 180px !important;
+}
+
+body .main-container .content .fila-cubiertas.fila-trasera .cubierta-card .formulario-cambio {
+    transform: scale(0.95) !important;
+}
+
+/* Mejorar la visualización en pantallas más pequeñas */
+@media (max-width: 1200px) {
+    .fila-delantera .cubierta-card, 
+    .fila-trasera .cubierta-card {
+        width: calc(48% - 20px) !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .fila-delantera .cubierta-card, 
+    .fila-trasera .cubierta-card {
+        width: 100% !important;
+        max-width: 500px !important;
+    }
+    
+    .cubierta-title {
+        font-size: 16px !important;
+    }
+}
+
+/* Mensaje de información dentro de la tarjeta cuando no hay cubierta */
+.mensaje-info {
+    text-align: center !important;
+    padding: 20px !important;
+    background-color: rgba(52, 152, 219, 0.1) !important;
+    border-radius: 6px !important;
+    margin-top: 20px !important;
+}
+
+.mensaje-info i {
+    font-size: 24px !important;
+    color: var(--color-primary) !important;
+    margin-right: 10px !important;
+}

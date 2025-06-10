@@ -1,0 +1,113 @@
+/* header-fix.css - Versión mejorada */
+
+/* Resetear estilos de encabezado existentes */
+header {
+    display: block !important;
+    position: relative !important;
+    padding: 10px !important;
+    background-color: #3e50 !important;
+    border-radius: 8px !important;
+    margin-bottom: 20px !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Eliminar flexbox existente para evitar conflictos */
+header .logo-container {
+    display: grid !important;
+    grid-template-columns: 1fr auto 1fr !important;
+    align-items: center !important;
+    width: 100% !important;
+    flex-direction: unset !important; /* Anular posibles flexbox anteriores */
+    justify-content: unset !important; /* Anular posibles flexbox anteriores */
+}
+
+/* Crear el espacio vacío a la izquierda para equilibrar */
+header .logo-container:before {
+    content: "" !important;
+    grid-column: 1 !important;
+}
+
+/* Centrar perfectamente el título */
+header .logo-container h1 {
+    grid-column: 2 !important;
+    text-align: center !important;
+    color: #3498db !important;
+    font-size: 2.8rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 1px !important;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3) !important;
+    margin: 0 !important;
+    padding: 0 15px !important;
+    width: auto !important; /* Eliminar cualquier ancho fijo anterior */
+    justify-self: center !important; /* Asegurar centrado en Grid */
+}
+
+/* Colocar el logo a la derecha */
+header .logo-container img {
+    grid-column: 3 !important;
+    justify-self: end !important; /* Alinear a la derecha en Grid */
+    max-height: 60px !important;
+    margin: 0 !important; /* Eliminar márgenes anteriores */
+    margin-right: 0 !important;
+    margin-left: auto !important;
+    order: unset !important; /* Eliminar posibles órdenes de flex */
+}
+
+/* Adaptaciones responsivas */
+@media (max-width: 768px) {
+    header .logo-container {
+        grid-template-columns: 1fr !important;
+        grid-template-rows: auto auto !important;
+        gap: 15px !important;
+    }
+    
+    header .logo-container:before {
+        display: none !important;
+    }
+    
+    header .logo-container h1 {
+        grid-column: 1 !important;
+        grid-row: 2 !important;
+        font-size: 1.8rem !important;
+    }
+    
+    header .logo-container img {
+        grid-column: 1 !important;
+        grid-row: 1 !important;
+        justify-self: center !important;
+    }
+}
+
+/* Arreglo para cuando se usa <div class="header-container"> directamente */
+header .header-container {
+    display: grid !important;
+    grid-template-columns: 1fr auto 1fr !important;
+    align-items: center !important;
+    width: 100% !important;
+}
+
+header .empty-space {
+    grid-column: 1 !important;
+}
+
+header .header-title {
+    grid-column: 2 !important;
+    text-align: center !important;
+    color: #3498db !important;
+    font-size: 2.2rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 1px !important;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3) !important;
+    margin: 0 !important;
+    padding: 0 15px !important;
+}
+
+header .logo-wrapper {
+    display: flex !important;
+    justify-content: flex-end !important;
+    grid-column: 3 !important;
+}
+
+header .header-logo {
+    max-height: 60px !important;
+}
