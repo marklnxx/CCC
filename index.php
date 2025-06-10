@@ -905,7 +905,7 @@ if(isset($_POST['asignar_cubiertas']) && isset($_POST['coche_id']) && isset($_PO
         <br>
 
         <footer class="fade-in delay-5">
-            <p>&copy; <?php echo date('Y'); ?> Sistema de Gestión de Cubiertas | Empresa Casanova S.A todos los derechos reservados</p>
+            <p>&copy; <?php echo date('Y'); ?> Sistema de Gestión de Cubiertas | Empresa Casanova S.A todos los derechos reservados 2025</p>
         </footer>
     </div>
     </div>
